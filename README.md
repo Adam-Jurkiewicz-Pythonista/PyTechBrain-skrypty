@@ -1,3 +1,9 @@
+# PyTechBrain - innowacyjna nauka programowania
+
+Chciałbym przedstawić inspirację dla nauczycieli, w pełni zgodną z nową podstawą programową. To innowacyjny projekt - wprowadzający do tematu IoT. Łączy elektronikę i programowanie w jednym pudełku, pozwala uczyć od klasy 4 szkoły podstawowej do końca liceum. Zaczynamy środowiskiem opartym o Scratch, po czym przechodzimy do Pythona. Wszystko z czujnikami i diodami w tle...
+
+---
+
 # PyTechBrain-skrypty
 Przykładowe skrypty dla obsługi układu PyTechBrain 
 
@@ -31,10 +37,16 @@ Projekt dla klas 7-8: gra w pong'a (z książki) - potencjometr steruje jedną p
 
 Lo technikum: dodatkowo gra ponga i sterowanie, ale z dziedziczeniem klasy i dodaniem jakiejś własnej metody.
 
+====================================================================
+
+Oprogramowanie i dokumentacja:
+https://pytechbrain.edu.pl/oprogramowanie-zasoby.html
+
+====================================================================
 
 # Valid methods:
 
-```
+```python
     --[ general-purpose ]--
     P.license_info() -> str
     P.version_info() -> str
@@ -62,17 +74,17 @@ Lo technikum: dodatkowo gra ponga i sterowanie, ale z dziedziczeniem klasy i dod
         "beep" - short (0.1 sec.) signal
         "demo" - music from Star Wars
     -----------
-    P.set_off_outputs() -> boot
+    P.set_off_outputs() -> bool
     --[ Input ]--
     P.get_left_button_state(times=3) -> bool
     P.get_middle_button_state(times=3) -> bool
     P.get_right_button_state(times=3) -> bool
     times -> 3 ... 10 checks
 
-    P.get_temperature_raw() -> int
+    P.get_temperature_raw() -> int  # (0..1023)
     P.get_temperature_celcius() -> float (2 decimal precision)
-    P.get_fotoresistor_raw() -> int
-    P.get_volume_sensor_raw() -> int
-    P.get_potentiometer_raw() -> int
+    P.get_fotoresistor_raw() -> int  # (0..1023)
+    P.get_volume_sensor_raw() -> int  # (0..1023)
+    P.get_potentiometer_raw() -> int  # (0..1023)
     P.get_potentiometer_scale() -> float
 ```
